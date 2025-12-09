@@ -28,59 +28,109 @@
       <div class="px-6 py-8 sm:p-10">
         <!-- Current Progress Tab -->
         <div id="content-progress" class="tab-content">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Current Status</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Project Completed</h3>
           <p class="text-gray-700 mb-6">
-            We currently have a working chatbot that retrieves relevant paragraphs related to the user's question and uses these as context to provide accurate answers. The system successfully implements:
+            We have successfully delivered a fully functional AI-powered research tool for theological texts. The Smart Library Assistant is now deployed and accessible to users.
           </p>
+
+          <h4 class="text-lg font-semibold text-gray-900 mb-3">Key Features Implemented</h4>
           <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-            <li>Integration with the Claude API for natural language processing</li>
-            <li>Retrieval-Augmented Generation (RAG) to provide context-aware answers</li>
-            <li>Semantic search using embeddings to find relevant passages</li>
-            <li>Citation generation that links to the source material</li>
+            <li>Agentic RAG architecture that dynamically adapts retrieval strategy to query needs</li>
+            <li>Integration with Anthropic's Claude API and LangChain for intelligent orchestration</li>
+            <li>Semantic search using Manticore Search with vector and full-text capabilities</li>
+            <li>Citation generation with clickable links to source paragraphs in CCEL</li>
+            <li>Filter functionality to narrow searches by author or work</li>
+            <li>Usage statistics tracking (7-day and 30-day periods)</li>
           </ul>
-          <p class="text-gray-700 mb-6">
-            The chatbot effectively handles theological queries by retrieving contextual information from the Christian Classics Ethereal Library corpus.
-          </p>
-          <p class="text-gray-700">
-            Our current focus is on improving the retrieval accuracy and enhancing the user interface experience.
-          </p>
+
+          <h4 class="text-lg font-semibold text-gray-900 mb-3">Evaluation Results</h4>
+          <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <p class="text-2xl font-bold text-primary-600">2,716</p>
+                <p class="text-sm text-gray-600">Queries Tested</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-primary-600">48.1%</p>
+                <p class="text-sm text-gray-600">Overall Accuracy</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-primary-600">52.8%</p>
+                <p class="text-sm text-gray-600">Perfect Match Rate</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-primary-600">Top 3</p>
+                <p class="text-sm text-gray-600">Avg Matched Rank</p>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="text-lg font-semibold text-gray-900 mb-3">Success Criteria</h4>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-2 pr-4 font-semibold text-gray-900">Criterion</th>
+                  <th class="text-left py-2 pr-4 font-semibold text-gray-900">Status</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                <tr class="border-b border-gray-100">
+                  <td class="py-2 pr-4">Source Attribution</td>
+                  <td class="py-2 pr-4 text-green-600 font-medium">Achieved</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2 pr-4">Retrieval Accuracy Baseline</td>
+                  <td class="py-2 pr-4 text-green-600 font-medium">Achieved (48.1%)</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2 pr-4">Functional MVP</td>
+                  <td class="py-2 pr-4 text-green-600 font-medium">Exceeded (Full Features)</td>
+                </tr>
+                <tr>
+                  <td class="py-2 pr-4">Deployment</td>
+                  <td class="py-2 pr-4 text-green-600 font-medium">Achieved (CCEL Servers)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <!-- Technologies Tab -->
         <div id="content-technologies" class="tab-content hidden">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Technologies Used</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Technology Stack</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="border border-gray-200 rounded-lg p-5">
               <h4 class="font-semibold text-gray-900 mb-2">Frontend</h4>
               <ul class="list-disc list-inside space-y-1 text-gray-700">
-                <li>Next.js for the web application framework</li>
-                <li>React for building the user interface</li>
-                <li>Tailwind CSS for styling</li>
+                <li>Next.js for React-based web application</li>
+                <li>Tailwind CSS for responsive styling</li>
+                <li>Chat interface with conversation context</li>
               </ul>
             </div>
             <div class="border border-gray-200 rounded-lg p-5">
               <h4 class="font-semibold text-gray-900 mb-2">Backend</h4>
               <ul class="list-disc list-inside space-y-1 text-gray-700">
-                <li>Python for backend services</li>
-                <li>Claude API for natural language processing</li>
-                <li>Manticore Search for vector database functionality</li>
-                <li>MySQL for metadata storage</li>
+                <li>FastAPI with Uvicorn for async Python API</li>
+                <li>Anthropic Claude API for language generation</li>
+                <li>LangChain for agent orchestration</li>
+                <li>Manticore Search for vector and full-text search</li>
               </ul>
             </div>
             <div class="border border-gray-200 rounded-lg p-5">
-              <h4 class="font-semibold text-gray-900 mb-2">Data Processing</h4>
+              <h4 class="font-semibold text-gray-900 mb-2">Infrastructure</h4>
               <ul class="list-disc list-inside space-y-1 text-gray-700">
-                <li>XML parsing for document processing</li>
-                <li>Text embeddings for semantic search</li>
-                <li>Claude for generating testing datasets</li>
+                <li>Docker Compose for container orchestration</li>
+                <li>Deployed on CCEL infrastructure</li>
+                <li>Semantic embeddings for passage retrieval</li>
               </ul>
             </div>
             <div class="border border-gray-200 rounded-lg p-5">
-              <h4 class="font-semibold text-gray-900 mb-2">Testing & Validation</h4>
+              <h4 class="font-semibold text-gray-900 mb-2">Testing & Evaluation</h4>
               <ul class="list-disc list-inside space-y-1 text-gray-700">
-                <li>Automated testing dataset generation</li>
-                <li>User testing with researchers and students</li>
-                <li>Accuracy metrics for retrieval evaluation</li>
+                <li>2,716 queries from Ante-Nicene Fathers corpus</li>
+                <li>Position-aware scoring metrics</li>
+                <li>Claude-generated test questions</li>
               </ul>
             </div>
           </div>
@@ -92,7 +142,7 @@
           <div class="relative">
             <div class="absolute top-0 bottom-0 left-6 w-0.5 bg-gray-200"></div>
             <div class="relative z-10">
-              <!-- Milestone 1 -->
+              <!-- Semester 1: Spring 2025 -->
               <div class="mb-8">
                 <div class="flex items-center">
                   <div class="bg-accent-500 rounded-full h-12 w-12 flex items-center justify-center shadow-lg">
@@ -101,64 +151,66 @@
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <h4 class="text-lg font-medium text-gray-900">Mid-Semester Milestone (March 15th, 2025)</h4>
-                    <p class="text-gray-500">Foundational Setup and Core Component</p>
+                    <h4 class="text-lg font-medium text-gray-900">Semester 1: Spring 2025</h4>
+                    <p class="text-gray-500">Foundation & MVP Development</p>
                   </div>
                 </div>
                 <div class="ml-16 mt-3">
                   <ul class="list-disc list-outside text-gray-700 space-y-1">
-                    <li>Software Development Environment Established</li>
-                    <li>Technology Stack Selected and Initial Setup</li>
-                    <li>Basic Backend and Frontend Functionality</li>
-                    <li>Sample Test Data Ready</li>
+                    <li>Established development environment and technology stack</li>
+                    <li>Implemented basic frontend chat interface</li>
+                    <li>Built initial RAG pipeline with Manticore integration</li>
+                    <li>Created MVP with basic query-response functionality</li>
+                    <li>Developed testing framework and initial dataset</li>
                   </ul>
                 </div>
               </div>
 
-              <!-- Milestone 2 -->
+              <!-- Semester 2: Fall 2025 -->
               <div class="mb-8">
                 <div class="flex items-center">
-                  <div class="bg-primary-500 rounded-full h-12 w-12 flex items-center justify-center shadow-lg">
+                  <div class="bg-accent-500 rounded-full h-12 w-12 flex items-center justify-center shadow-lg">
                     <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <h4 class="text-lg font-medium text-gray-900">End-of-Semester Milestone (April 30th, 2025)</h4>
-                    <p class="text-gray-500">Minimum Viable Product</p>
+                    <h4 class="text-lg font-medium text-gray-900">Semester 2: Fall 2025</h4>
+                    <p class="text-gray-500">Enhancement & Final Delivery</p>
                   </div>
                 </div>
                 <div class="ml-16 mt-3">
                   <ul class="list-disc list-outside text-gray-700 space-y-1">
-                    <li>Minimum Viable Product (MVP) Achieved</li>
-                    <li>Initial Testing Dataset v1.0 Completed</li>
-                    <li>Get an accuracy percentage</li>
-                    <li>Deliverables: Presentation & Preliminary Report</li>
+                    <li>Transitioned from traditional RAG to Agentic RAG</li>
+                    <li>Implemented filter functionality (by author/work)</li>
+                    <li>Added usage statistics tracking</li>
+                    <li>Deployed to CCEL infrastructure via Docker</li>
+                    <li>Conducted comprehensive retrieval evaluation (2,716 queries)</li>
+                    <li>Refined UI/UX based on testing</li>
                   </ul>
                 </div>
               </div>
 
-              <!-- Milestone 3 -->
+              <!-- Project Completion -->
               <div class="mb-8">
                 <div class="flex items-center">
-                  <div class="bg-gray-300 rounded-full h-12 w-12 flex items-center justify-center shadow-lg">
-                    <svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  <div class="bg-green-500 rounded-full h-12 w-12 flex items-center justify-center shadow-lg">
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div class="ml-4">
-                    <h4 class="text-lg font-medium text-gray-900">Project Website Launch (May 9th, 2025)</h4>
-                    <p class="text-gray-500">Project Documentation and Public Visibility</p>
+                    <h4 class="text-lg font-medium text-gray-900">Project Completion: December 2025</h4>
+                    <p class="text-gray-500">Final Report & Presentation</p>
                   </div>
                 </div>
-              </div>
-
-              <!-- Future Milestones -->
-              <div class="text-center mt-12 pt-6 border-t border-gray-200">
-                <h4 class="text-lg font-medium text-gray-900 mb-4">Future Milestones</h4>
-                <p class="text-gray-700">
-                  For the Fall 2025 semester, we have planned milestones for Enhanced Functionality (October 15th) and Final Refinement (December 1st). These will focus on system improvements, user testing, and preparing the final comprehensive report.
-                </p>
+                <div class="ml-16 mt-3">
+                  <ul class="list-disc list-outside text-gray-700 space-y-1">
+                    <li>Comprehensive final report delivered</li>
+                    <li>Live system deployed at CCEL</li>
+                    <li>CCEL integration planned for future</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

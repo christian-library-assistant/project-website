@@ -10,11 +10,12 @@
         </a>
       </div>
       <nav class="hidden sm:ml-6 sm:flex sm:space-x-8 items-center">
-        <a href="#vision" class="text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium">Vision</a>
-        <a href="#team" class="text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium">Team</a>
-        <a href="#code" class="text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium">Code</a>
-        <a href="#report" class="text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium">Report</a>
-        <a href="#presentation" class="text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium">Presentation</a>
+        <a href="#vision" class="nav-link text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors">Vision</a>
+        <a href="#demo" class="nav-link text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors">Demo</a>
+        <a href="#team" class="nav-link text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors">Team</a>
+        <a href="#code" class="nav-link text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors">Code</a>
+        <a href="#report" class="nav-link text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors">Report</a>
+        <a href="#presentation" class="nav-link text-gray-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors">Presentation</a>
         <a href="https://computing.calvin.edu/" target="_blank" rel="noopener noreferrer" class="bg-primary-100 text-primary-800 hover:bg-primary-200 transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium">
           CS Department
         </a>
@@ -33,11 +34,12 @@
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden sm:hidden">
     <div class="pt-2 pb-3 space-y-1">
-      <a href="#vision" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Vision</a>
-      <a href="#team" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Team</a>
-      <a href="#code" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Code</a>
-      <a href="#report" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Report</a>
-      <a href="#presentation" class="text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Presentation</a>
+      <a href="#vision" class="nav-link-mobile text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Vision</a>
+      <a href="#demo" class="nav-link-mobile text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Demo</a>
+      <a href="#team" class="nav-link-mobile text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Team</a>
+      <a href="#code" class="nav-link-mobile text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Code</a>
+      <a href="#report" class="nav-link-mobile text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Report</a>
+      <a href="#presentation" class="nav-link-mobile text-gray-700 hover:bg-gray-100 block px-3 py-2 text-base font-medium">Presentation</a>
       <a href="https://computing.calvin.edu/" target="_blank" rel="noopener noreferrer" class="bg-primary-100 text-primary-800 hover:bg-primary-200 block px-3 py-2 text-base font-medium">
         CS Department
       </a>
@@ -63,4 +65,41 @@
       mobileMenu!.classList.add('hidden');
     });
   });
+
+  // Active section highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
+
+  function highlightNavLink() {
+    const scrollY = window.scrollY;
+
+    sections.forEach(section => {
+      const sectionTop = (section as HTMLElement).offsetTop - 100;
+      const sectionHeight = (section as HTMLElement).offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        // Desktop nav
+        navLinks.forEach(link => {
+          link.classList.remove('text-primary-700', 'font-semibold');
+          link.classList.add('text-gray-700');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.remove('text-gray-700');
+            link.classList.add('text-primary-700', 'font-semibold');
+          }
+        });
+        // Mobile nav
+        navLinksMobile.forEach(link => {
+          link.classList.remove('text-primary-700', 'bg-primary-50');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('text-primary-700', 'bg-primary-50');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightNavLink);
+  highlightNavLink(); // Run on page load
 </script>

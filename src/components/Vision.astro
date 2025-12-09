@@ -17,11 +17,11 @@
         </p>
         
         <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          Retrieval-augmented generation (RAG) is the main solution used for our approach, aiming to integrate a pre-trained Large Language Model, specifically Claude, with a dataset of Christian texts from CCEL. Instead of relying only on the model's pre-trained knowledge of Christian texts, RAG retrieves relevant paragraphs and their associated metadata directly from our dataset in response to a user's query. To achieve this, the system uses embeddings to identify and retrieve semantically similar passages from the dataset, and these passages are then fed into the Large Language Model as context.
+          Our solution employs <strong>Agentic RAG</strong> (Retrieval-Augmented Generation), an advanced approach where Claude acts as an intelligent agent that dynamically adapts its retrieval strategy to each query's needs. Unlike traditional RAG that retrieves a fixed number of passages for every query, our agentic architecture allows the AI to: analyze the user's query to determine retrieval needs, formulate optimized search queries, decide whether retrieved results are sufficient or require additional searches, and synthesize information from multiple retrieval rounds. This approach significantly improves response quality and efficiency.
         </p>
         
         <p class="text-lg text-gray-700 leading-relaxed">
-          The key features of our system enhance the user experience and the accuracy of the results. First, it offers a domain-specific search, explicitly tailored to our domain and rigorously tested on theological texts to ensure relevance and precision. Second, the system includes citation generation, meaning that responses will include a link to the cited paragraph, therefore adding more confidence that the answers sent to users are accurate. Finally, we will create a user-friendly interface, featuring an intuitive chatbot that automatically applies filters based on user queries and supports follow-up questions for a more natural conversation experience.
+          The key features of our system enhance the user experience and the accuracy of the results. First, it offers a domain-specific search, explicitly tailored to theological texts from CCEL and rigorously tested on 2,716 queries. Second, the system includes citation generation, with every response linking directly to the cited paragraph in the source material. Finally, we built a user-friendly chat interface featuring intuitive filters by author or work and support for follow-up questions within conversational context.
         </p>
       </div>
     </div>
